@@ -3,14 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | NFT preview card component</title>
 
+  <!--Main Css-->
   <link rel="stylesheet" href="css/index.css">
+
+  <!--Link Font Google-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
@@ -23,11 +29,17 @@
     <p class="c-sectionMain__tile">Equilibrium #3429</p>
     <p class="c-sectionMain__text">Our Equilibrium collection promotes balance and calm.</p>
     <div class="c-informacaoMain">
-      <span class="c-informacaoMain__detalheETH">0.041 ETH</span>
-      <span class="c-informacaoMain_detalheDias">3 days left</span>
+      <span class="c-informacaoMain__detalheETH">
+        <img src="images/icon-ethereum.svg" class="c-informacaoMain--spaceSvg">
+        0.041 ETH
+      </span>
+      <span class="c-informacaoMain__detalheDias">
+        <img src="images/icon-clock.svg" class="c-informacaoMain--spaceSvg">
+        3 days left
+      </span>
     </div>
     <div class="c-perfilMain">
-      <span class="c-perfilMain__avatar"><img src="./images/image-avatar.png"></span>
+      <span class="c-perfilMain__avatar"><img src="./images/image-avatar.png" width="50"></span>
       <span class="c-perfilMain__detailCreator">Creation of Jules Wyvern</span>
     </div>
   </section>
