@@ -1,0 +1,185 @@
+/**
+* 1.0 Generic Selector
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #0D192B;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+/**
+* 1.0 Section Main
+* 
+* Section main of page
+*/
+
+#c-sectionMain {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+    height: 600px;
+    margin: 10px auto 20px;
+    border-radius: 20px;
+    background-color: #14253D;
+    color: #8BACDA;
+}
+
+.c-imageButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+
+.c-imageButton__Main {
+    width: 100%;
+    height: 100%;
+}
+
+.c-imageButton__View {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.c-imageButton__View:hover {
+    background: rgba(0, 255, 247, 0.5) url("../images/icon-view.svg") no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+}
+
+.c-sectionMain__tile {
+    margin: 25px 0;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #fff;
+    background: transparent;
+    border: 0;
+}
+
+.c-sectionMain__tile:hover {
+    cursor: pointer;
+    color: #00FFF7;
+}
+
+@media screen and (min-width: 370px) {
+    #c-sectionMain {
+        width: 360px;
+    }
+}
+
+/**
+* 2.0 Container Information Card
+* 
+* Container with information of card
+*/
+
+.c-sectionMain__text {
+    margin-bottom: 25px;
+}
+
+.c-informacaoMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.c-informacaoMain__detalheETH {
+    color: #00FFF7;
+}
+
+.c-informacaoMain__detalheETH,
+.c-informacaoMain__detalheDias {
+    display: flex;
+    align-items: center;
+}
+
+.c-informacaoMain--spaceSvg {
+    margin-right: 5px;
+}
+
+/**
+* 3.0 Container Information Perfil
+* 
+* Container with information of perfil
+*/
+
+.c-perfilMain {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.c-perfilMain__avatar>img {
+    width: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.c-perfilMain__detailCreator {
+    margin-left: 20px;
+}
+
+.c-perfilMain__detailCreator>span,
+.c-perfilMain__detailCreator>a {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.c-perfilMain__buttonPerson {
+    background: transparent;
+    border: 0;
+}
+
+.c-perfilMain__buttonPerson:hover {
+    color: #00FFF7;
+    cursor: pointer;
+}
+
+/**
+* 4.0 Container Attribution
+* 
+* Container with information of developer and page of project
+*/
+
+.c-attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.c-attribution a:hover {
+    color: #00FFF7;
+    cursor: pointer;
+}
+
+.c-attribution p,
+.c-attribution a {
+    color: #fff;
+    text-decoration: none;
+}
