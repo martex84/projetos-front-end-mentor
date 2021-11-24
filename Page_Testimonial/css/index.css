@@ -1,0 +1,264 @@
+/**
+* 1.0 Generic Selector
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    font-size: 0.9em;
+    background-color: #ECF2F8;
+}
+
+/**
+* 2.0 Section Main
+* 
+* Section main of page
+*/
+
+.c-sectionMain {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 40px;
+    max-width: 1200px;
+    max-height: 800px;
+    margin: 20px;
+}
+
+.c-sectionMain__column {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/**
+* 2.1 Section Main Media Query
+*/
+
+@media screen and (max-width: 1001px) {
+    .c-sectionMain__column {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .c-sectionMain {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-width: 350px;
+        margin: 10px;
+    }
+
+    .c-sectionMain__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/**
+* 3.0 Container Information
+* 
+* Container with information and text
+*/
+
+.c-information {
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.c-information:first-child {
+    margin-right: 40px;
+}
+
+.c-information>p {
+    margin: 20px;
+}
+
+.c-information>p:nth-child(2) {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.c-information--small {
+    flex-shrink: 1;
+    width: 320px;
+    z-index: 2;
+}
+
+.c-information--horizontal {
+    flex-shrink: 3;
+    width: 100%;
+    z-index: 1;
+}
+
+.c-information--horizontal>.c-information__perfil>img {
+    border: 2px solid;
+}
+
+.c-information--vertical {
+    grid-row: 1 / span 2;
+    grid-column: 2 / 3;
+    width: 300px;
+}
+
+.c-information__perfil {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    padding: 20px;
+}
+
+.c-information__perfil>img {
+    width: 35px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.c-information__perfil>div {
+    display: flex;
+    flex-direction: column;
+    color: #CFCFCF;
+}
+
+.c-information__DetailProfile>span {
+    color: #fff;
+}
+
+.c-information__DetailProfile>span:nth-child(2) {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.c-information__DetailProfile--dark>span {
+    color: #48556A;
+}
+
+.c-information__DetailProfile--dark>span:nth-child(2) {
+    color: rgba(72, 85, 106, 0.5);
+}
+
+/**
+* 3.1 Container Information Color White
+*/
+
+.c-information--colorWhite {
+    background-color: #fff;
+}
+
+.c-information--colorWhite>p {
+    color: rgba(72, 85, 106, 0.7);
+}
+
+.c-information--colorWhite>p:nth-child(2) {
+    color: #48556A;
+}
+
+/**
+* 3.2 Container Information Color Violete
+*/
+
+.c-information--colorViolete {
+    background-color: #7541C8;
+}
+
+.c-information--colorViolete>p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.c-information--colorViolete>p:nth-child(2) {
+    color: #fff;
+}
+
+/**
+* 3.3 Container Information Color grayish
+*/
+
+.c-information--colorGrayish {
+    background-color: #48556A;
+}
+
+.c-information--colorGrayish>p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.c-information--colorGrayish>p:nth-child(2) {
+    color: #fff;
+}
+
+/**
+* 3.4 Container Information Color blackish
+*/
+
+.c-information--colorBlackish {
+    background-color: #19212E;
+}
+
+.c-information--colorBlackish>p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.c-information--colorBlackish>p:nth-child(2) {
+    color: #fff;
+}
+
+/**
+* 3.5 Container Information Media Query
+*/
+
+@media screen and (max-width: 1050px) {
+    .c-information:first-child {
+        margin-bottom: 40px;
+    }
+
+    .c-information--horizontal {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .c-information,
+    .c-information--horizontal,
+    .c-information--vertical {
+        width: 350px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .c-information,
+    .c-information--vertical {
+        height: 100%;
+    }
+}
+
+
+/**
+* 4.0 Container Attribution
+* 
+* Container with information of developer and page of project
+*/
+
+.attribution,
+.attribution>a {
+    margin: 20px 0;
+    color: #48556A;
+    text-decoration: none;
+}
