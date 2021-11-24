@@ -1,0 +1,121 @@
+/**
+* 1.0 Generic Selector
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 0.85em;
+}
+
+/**
+* 2.0 Section Main
+* 
+* Section main of page
+*/
+
+.c-sectionMain {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 1000px;
+    height: 100%;
+    margin: 20px;
+}
+
+.c-sectionMain__column {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 1001px) {
+    .c-sectionMain__column {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .c-sectionMain {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-width: 350px;
+        margin: 10px;
+    }
+
+    .c-sectionMain__column {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/**
+* 3.0 Container Information
+* 
+* Container with information and text
+*/
+
+.c-information {
+    padding: 20px;
+}
+
+.c-information--small {
+    flex-shrink: 1;
+    width: 300px;
+    z-index: 2;
+}
+
+.c-information--horizontal {
+    flex-shrink: 3;
+    width: 100%;
+    z-index: 1;
+}
+
+.c-information--vertical {
+    grid-row: 1 / span 3;
+    grid-column: 2 / 3;
+    width: 300px;
+}
+
+.c-information>div {
+    width: 300px;
+}
+
+@media screen and (max-width: 1050px) {
+    .c-information--horizontal {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .c-information,
+    .c-information--vertical {
+        width: 350px;
+        height: 100%;
+    }
+}
+
+
+/**
+* 4.0 Container Attribution
+* 
+* Container with information of developer and page of project
+*/
+
+.attribution {
+    margin: 20px 0;
+}
